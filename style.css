@@ -1,0 +1,49 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: black;
+}
+
+div {
+    margin-left: 500px;
+    margin-top: 200px;
+}
+
+button {
+    background-color: black;
+    border: none;
+    color: white;
+    font-family: sans-serif;
+    width: 200px;
+    height: 100px;
+    font-size: 40px;
+    border-radius: 20px;
+    position: relative;
+    cursor: pointer;
+}
+
+button::after {
+    content: '';
+    width: 204px;
+    height: 104px;
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-image: linear-gradient(to right, red, orange, green, blue, magenta);
+    z-index: -1;
+    border-radius: 22px;
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+}
+
+button:hover::after {
+    opacity: 0.5;
+    transition-property: opacity;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+}
